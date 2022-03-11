@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+	<head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../src/switchify.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript" src="../src/switchify.js"></script>
+        <style>
+
+            * {
+                padding: 0;
+                margin: 0;
+            }
+
+            html {
+                background-color: #f3f3f3;
+            }
+
+            body {
+                font-family: sans-serif;
+            }
+
+            .wrapper {
+                margin: 30px auto;
+            }
+
+            .wrapper > * {
+                padding: 30px;
+                width: 200px;
+            }
+            
+            table {
+                width: 100%;
+                border-spacing: 0;
+                background-color: #fff;
+                border-radius: 10px;
+                margin-top: 10px;
+            }
+
+            td {
+                padding: 10px;
+            }
+
+            td:first-of-type {
+                width: 100%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div>
+                <label id="myLabel"></label>
+            </div>
+            <nav>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label for="option1">option 1</label></td>
+                            <td>
+                                <input class="toSwitch" id="option1" type="checkbox" name="option1" checked />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="option2">option 2</label></td>
+                            <td>
+                                <input class="toSwitch" id="option2" type="checkbox" name="option2" checked />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </nav>
+        </div>
+        <script>
+
+            $('input[type=checkbox]').switchify();
+            
+        </script>
+    </body>
+</html>
